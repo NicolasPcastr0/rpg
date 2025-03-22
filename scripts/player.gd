@@ -7,7 +7,7 @@ var player_alive = true
 
 var attack_ip = false
 
-const speed = 100
+var speed = global.player_speed
 var curr_dir = "none"
 
 func _ready() -> void:

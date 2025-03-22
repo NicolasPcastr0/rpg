@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RPG"
-run/main_scene="uid://3ijcgyws37n3"
+run/main_scene="uid://q0tu4a8mqjqn"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://sprites/icon.svg"
 
@@ -31,3 +31,4 @@ attack={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
