@@ -9,12 +9,14 @@ var attack_ip = false
 
 var speed = global.player_speed
 var curr_dir = "none"
+var input_dir = Vector2.ZERO;
 
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
 
 func _physics_process(delta):
-	player_movement(delta)
+	#input_dir = Input.get_vector("ui_right", "ui_left", "ui_down", "ui_up")
+	player_movement()
 	enemy_attack()
 	attack()
 	
@@ -24,36 +26,23 @@ func _physics_process(delta):
 		print("jogador foi morto")
 		self.queue_free()
 	
-func player_movement(delta):
-	
-	if Input.is_action_pressed("ui_right"):
-		curr_dir = "right"
-		play_anim(1)
-		velocity.x = speed
-		velocity.y = 0
-		
-	elif Input.is_action_pressed("ui_left"):
-		curr_dir = "left"
-		play_anim(1)
-		velocity.x = -speed
-		velocity.y = 0
-		
-	elif Input.is_action_pressed("ui_down"):
-		curr_dir = "down"
-		play_anim(1)
-		velocity.y = speed
-		velocity.x = 0
+func player_movement():
+	if input_dir.length() > 0:  # Apenas move se houver entrada
+		if input_dir.x > 0:
+			curr_dir = "right"
+		elif input_dir.x < 0:
+			curr_dir = "left"
+		elif input_dir.y > 0:
+			curr_dir = "down"
+		elif input_dir.y < 0:
+			curr_dir = "up"
 
-	elif Input.is_action_pressed("ui_up"):
-		curr_dir = "up"
-		play_anim(1)
-		velocity.y = -speed
-		velocity.x = 0
+		play_anim(1)  # Toca animação de movimento
+		velocity = input_dir * speed  # Move na direção desejada com a velocidade definida
 	else:
-		play_anim(0)
-		velocity.x = 0
-		velocity.y = 0
-		
+		play_anim(0)  # Animação de idle
+		velocity = Vector2.ZERO  # Para o movimento
+	
 	move_and_slide()
 
 func play_anim(movement):
@@ -143,3 +132,8 @@ func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.stop()
 	global.player_current_attack = false
 	attack_ip = false
+
+
+func _on_virtual_joystick_analogic_change(move: Vector2) -> void:
+	input_dir = move
+	print(move)

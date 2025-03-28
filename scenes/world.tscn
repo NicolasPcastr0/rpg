@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://q0tu4a8mqjqn"]
+[gd_scene load_steps=24 format=4 uid="uid://q0tu4a8mqjqn"]
 
 [ext_resource type="Texture2D" uid="uid://ca6ur2l1b8n6u" path="res://sprites/tilesets/plains.png" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://dg5vl8insmk7e" path="res://scenes/world.gd" id="1_w7kh3"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://bvl1yiugddnf1" path="res://sprites/images/image_fx_ (2).png" id="5_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://dbo1rechgxt6i" path="res://sprites/tilesets/walls/walls.png" id="6_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://dh1d7b6sst71b" path="res://scripts/enemy.tscn" id="8_4mrxx"]
+[ext_resource type="Script" uid="uid://duqmvtuyyhxma" path="res://addons/virtual_joystick/scripts/virtual_joystick.gd" id="11_q5onr"]
+[ext_resource type="Texture2D" uid="uid://bc6paavcnnwf6" path="res://addons/virtual_joystick/sprites/stick_pressed.png" id="12_jhx03"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_4wyf3")
@@ -471,5 +473,15 @@ position = Vector2(260, 461)
 rotation = 0.575959
 shape = SubResource("RectangleShape2D_e3hyu")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VirtualJoystick" type="Node2D" parent="CanvasLayer"]
+z_index = 5
+position = Vector2(155, 466)
+script = ExtResource("11_q5onr")
+stick_pressed = ExtResource("12_jhx03")
+metadata/_custom_type_script = "uid://duqmvtuyyhxma"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="analogic_change" from="CanvasLayer/VirtualJoystick" to="player" method="_on_virtual_joystick_analogic_change"]
