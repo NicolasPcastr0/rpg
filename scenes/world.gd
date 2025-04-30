@@ -7,8 +7,9 @@ func _process(delta:float):
 	change_scene()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.has_method("player"):
-		global.transaction_scene = true	
+	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/dialogue.dialogue"), "start")
+	#if body.has_method("player"):
+	#	global.transaction_scene = true	
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):

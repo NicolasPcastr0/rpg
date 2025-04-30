@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://q0tu4a8mqjqn"]
+[gd_scene load_steps=25 format=4 uid="uid://q0tu4a8mqjqn"]
 
 [ext_resource type="Texture2D" uid="uid://ca6ur2l1b8n6u" path="res://sprites/tilesets/plains.png" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://dg5vl8insmk7e" path="res://scenes/world.gd" id="1_w7kh3"]
@@ -413,6 +413,8 @@ size = Vector2(37, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3hyu"]
 size = Vector2(37.8724, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5onr"]
+
 [node name="world" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(1, 1)
@@ -472,6 +474,10 @@ shape = SubResource("RectangleShape2D_w7kh3")
 position = Vector2(260, 461)
 rotation = 0.575959
 shape = SubResource("RectangleShape2D_e3hyu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(95, 55)
+shape = SubResource("RectangleShape2D_q5onr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
