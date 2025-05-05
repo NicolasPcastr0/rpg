@@ -426,9 +426,7 @@ script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_apa73")
-animation = &"side_idle"
-frame = 1
-frame_progress = 0.874124
+animation = &"front_idle"
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -436,8 +434,12 @@ position = Vector2(1, -2)
 shape = SubResource("CircleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(39, 32)
+position = Vector2(-1, 0)
 zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 646
 limit_smoothed = true
 rotation_smoothing_enabled = true
 drag_horizontal_enabled = true
