@@ -1,11 +1,11 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+Nathan: [[Olá|Eae]], isso é um dialogo.
+Nathan: Aqui estão algumas escolhas.
+- primeira
+	Nathan: Você escolheu a primeira.
+- Segunda
+	Nathan: Você escolheu a segunda.
+- Tente dnv => start
+- Finalizar => END
+Nathan: Para mais informações consulte o chatgpt.
 => END

@@ -7,9 +7,8 @@ func _process(delta:float):
 	change_scene()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	DialogueManager.show_example_dialogue_balloon(load("res://dialogue/dialogue.dialogue"), "start")
-	#if body.has_method("player"):
-	#	global.transaction_scene = true	
+	if body.has_method("player"):
+		global.transaction_scene = true	
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
@@ -24,3 +23,12 @@ func change_scene():
 			global.player_speed = global.player_speed_default
 			get_tree().change_scene_to_file("res://scenes/world.tscn")
 		global.finish_changescenes()
+
+
+func _on_area_2d_2_body_entered_dialog(body: Node2D) -> void:
+	if body.has_method("player"):
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/dialogue.dialogue"), "start")
+
+
+func _on_area_2d_2_body_exited_dialog(body: Node2D) -> void:
+	pass
