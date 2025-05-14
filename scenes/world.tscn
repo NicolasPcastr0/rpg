@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://q0tu4a8mqjqn"]
+[gd_scene load_steps=26 format=4 uid="uid://q0tu4a8mqjqn"]
 
 [ext_resource type="Texture2D" uid="uid://ca6ur2l1b8n6u" path="res://sprites/tilesets/plains.png" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://dg5vl8insmk7e" path="res://scripts/world.gd" id="1_w7kh3"]
@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bgi1n4g12wmhn" path="res://sprites/objects/chest_01.png" id="5_4mrxx"]
 [ext_resource type="Texture2D" uid="uid://bvl1yiugddnf1" path="res://sprites/images/image_fx_ (2).png" id="5_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://dbo1rechgxt6i" path="res://sprites/tilesets/walls/walls.png" id="6_7r4gi"]
+[ext_resource type="Texture2D" uid="uid://bn62n5d26qnhk" path="res://sprites/images/museu menor.png" id="10_jhx03"]
 [ext_resource type="Script" uid="uid://duqmvtuyyhxma" path="res://addons/virtual_joystick/scripts/virtual_joystick.gd" id="11_q5onr"]
 [ext_resource type="Texture2D" uid="uid://bc6paavcnnwf6" path="res://addons/virtual_joystick/sprites/stick_pressed.png" id="12_jhx03"]
 [ext_resource type="PackedScene" uid="uid://wtfw5yjemje1" path="res://scenes/npc_1.tscn" id="12_q5onr"]
-[ext_resource type="Texture2D" uid="uid://xlbfa3yboh6w" path="res://sprites/images/museutop-removebg-preview.png" id="13_jhx03"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_4wyf3")
@@ -167,33 +167,22 @@ texture = ExtResource("5_e3hyu")
 1:0/0/y_sort_origin = 20
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-98, -9, 97.5, -10.7297, 155.813, 17.2608, 158.844, 29.6868, -9.74325, 95.8526, -134.495, 39.6085, -158.869, 26.7684, -165, 18, -135.148, 6.31124)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o8fc1"]
+texture = ExtResource("10_jhx03")
+3:1/size_in_atlas = Vector2i(14, 15)
+3:1/0 = 0
+3:1/0/y_sort_origin = 70
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-109.794, 6.52887, -109.804, 88.1308, -74.1917, 88.6704, -73.832, 113.491, -54.5871, 114.03, -54.9826, 77.1805, 53.6165, 77.8635, 53.8512, 113.496, 73.6011, 113.232, 73.8644, 87.6893, 108.097, 87.426, 107.834, 5.79329)
+
 [sub_resource type="TileSet" id="TileSet_w7kh3"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7r4gi")
+sources/1 = SubResource("TileSetAtlasSource_o8fc1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7kh3"]
-size = Vector2(37, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3hyu"]
-size = Vector2(37.8724, 20)
+size = Vector2(41.5885, 103.312)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5onr"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhx03"]
-texture = ExtResource("5_e3hyu")
-0:0/size_in_atlas = Vector2i(22, 12)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-105.27, -7.25999, 99.9119, -7.90263, 155.23, 17.4987, 158.359, 28.9954, -8.92166, 96.2265, -163.529, 25.5431, -159.315, 13.9566)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o8fc1"]
-texture = ExtResource("13_jhx03")
-4:1/size_in_atlas = Vector2i(23, 24)
-4:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_o8fc1"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_jhx03")
-sources/2 = SubResource("TileSetAtlasSource_o8fc1")
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
@@ -220,28 +209,16 @@ tile_map_data = PackedByteArray("AAACAAAAAgAKAAcAAAAIAAUAAgAKAAcAAAATAAEAAgAKAAc
 tile_set = SubResource("TileSet_7r4gi")
 
 [node name="museu" type="TileMapLayer" parent="."]
-z_index = 1
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAWABgAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAZABgAAQADAAEAAAA=")
 tile_set = SubResource("TileSet_w7kh3")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-y_sort_enabled = true
-polygon = PackedVector2Array(248, 389, 199, 409, 202, 421, 247, 442, 245, 458, 270, 476, 281, 459, 352, 488, 408, 466, 419, 479, 450, 462, 445, 452, 511, 425, 513, 417, 501, 405, 456, 387, 436, 384, 367, 389)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(431, 466)
-rotation = -0.523599
+position = Vector2(408, 473)
+rotation = -1.5708
 shape = SubResource("RectangleShape2D_w7kh3")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(260, 461)
-rotation = 0.575959
-shape = SubResource("RectangleShape2D_e3hyu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -261,10 +238,6 @@ shape = SubResource("RectangleShape2D_q5onr")
 [node name="NPC-1" parent="." instance=ExtResource("12_q5onr")]
 y_sort_enabled = true
 position = Vector2(488, 97)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-y_sort_enabled = true
-tile_set = SubResource("TileSet_o8fc1")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
