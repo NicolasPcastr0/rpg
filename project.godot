@@ -25,7 +25,6 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
-window/handheld/orientation=1
 
 [editor_plugins]
 

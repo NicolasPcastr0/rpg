@@ -136,4 +136,3 @@ func _on_deal_attack_timer_timeout():
 
 func _on_virtual_joystick_analogic_change(move: Vector2) -> void:
 	input_dir = move
-	print(move)

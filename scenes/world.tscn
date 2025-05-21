@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://q0tu4a8mqjqn"]
+[gd_scene load_steps=24 format=4 uid="uid://q0tu4a8mqjqn"]
 
 [ext_resource type="Texture2D" uid="uid://ca6ur2l1b8n6u" path="res://sprites/tilesets/plains.png" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://dg5vl8insmk7e" path="res://scripts/world.gd" id="1_w7kh3"]
@@ -10,8 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bvl1yiugddnf1" path="res://sprites/images/image_fx_ (2).png" id="5_e3hyu"]
 [ext_resource type="Texture2D" uid="uid://dbo1rechgxt6i" path="res://sprites/tilesets/walls/walls.png" id="6_7r4gi"]
 [ext_resource type="Texture2D" uid="uid://bn62n5d26qnhk" path="res://sprites/images/museu menor.png" id="10_jhx03"]
-[ext_resource type="Script" uid="uid://duqmvtuyyhxma" path="res://addons/virtual_joystick/scripts/virtual_joystick.gd" id="11_q5onr"]
-[ext_resource type="Texture2D" uid="uid://bc6paavcnnwf6" path="res://addons/virtual_joystick/sprites/stick_pressed.png" id="12_jhx03"]
 [ext_resource type="PackedScene" uid="uid://wtfw5yjemje1" path="res://scenes/npc_1.tscn" id="12_q5onr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
@@ -183,6 +181,7 @@ sources/1 = SubResource("TileSetAtlasSource_o8fc1")
 size = Vector2(41.5885, 103.312)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5onr"]
+size = Vector2(28, 26)
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
@@ -220,24 +219,15 @@ position = Vector2(408, 473)
 rotation = -1.5708
 shape = SubResource("RectangleShape2D_w7kh3")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="VirtualJoystick" type="Node2D" parent="CanvasLayer"]
-z_index = 5
-position = Vector2(155, 466)
-script = ExtResource("11_q5onr")
-stick_pressed = ExtResource("12_jhx03")
-metadata/_custom_type_script = "uid://duqmvtuyyhxma"
-
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(95, 55)
+position = Vector2(489, 112)
 shape = SubResource("RectangleShape2D_q5onr")
 
 [node name="NPC-1" parent="." instance=ExtResource("12_q5onr")]
 y_sort_enabled = true
-position = Vector2(488, 97)
+position = Vector2(488, 98)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 
@@ -246,6 +236,5 @@ polygon = PackedVector2Array(4, 0, 1152, 0, 1151, 647, -1, 647, 1, -9, -182, 90,
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="analogic_change" from="CanvasLayer/VirtualJoystick" to="player" method="_on_virtual_joystick_analogic_change"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered_dialog"]
 [connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited_dialog"]
