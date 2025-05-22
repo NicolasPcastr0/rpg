@@ -1,0 +1,13 @@
+~ start
+Rafel: [[Olá|Eae]], isso é um dialogo.
+Rafel: Aqui estão algumas escolhas.
+- primeira
+	Rafel: Você escolheu a primeira.
+- Segunda
+	Rafel: Você escolheu a segunda.
+- Terceira
+	Rafel: Você escolheu a Terceira.
+- Tente dnv => start
+- Finalizar => END
+Rafel: Para mais informações consulte o chatgpt.
+=> END
