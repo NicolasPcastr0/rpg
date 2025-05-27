@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://c87h7c8emhg0u"
+path="res://.godot/imported/guardiaoXarok.dialogue-df70b03f0eb590deb1102a3e4b88eaa2.tres"
+
+[deps]
+
+source_file="res://dialogue/npc/guardiaoXarok.dialogue"
+dest_files=["res://.godot/imported/guardiaoXarok.dialogue-df70b03f0eb590deb1102a3e4b88eaa2.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,84 @@
+~ start
+Guardiao Xarok: [[Oi|Bah, tchê]], vivente corajoso! Sou Xarok, guardião do Museu Municipal de Panambi. Pra entrar, tu precisa provar que manja da língua dos anglos. Vou te fazer sete perguntas, cada uma com quatro opções. Manda bem nas frase em inglês que os sábios te ensinaram! Pronto pra começar?
+- Tô pronto, tchê!
+	Guardiao Xarok: Tri, guri! Aqui vai a primeira pergunta. => pergunta1
+- Tô de boa, deixa pra depois.
+	Guardiao Xarok: Aparece quando tiveres coragem, tchê!
+=> END
+
+~ pergunta1
+Guardiao Xarok: Pergunta 1: Como tu cumprimenta alguém de forma amigável, tipo dando um alô bem na manha?
+- A) Good to see you!
+	 Guardiao Xarok: Baita resposta, tchê! Tô impressionado. Vamos pra próxima! => pergunta2
+- B) Good to know you!
+		Guardiao Xarok: Não, vivente, essa não é a certa. Tenta de novo? => pergunta1
+- C) Good to find you!
+		Guardiao Xarok: Bah, meteu os pé pela mão! Quer tentar outra vez? => pergunta1
+- D) Good to talk you!
+		Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta1
+
+~ pergunta2
+Guardiao Xarok: Pergunta 2: Qual frase tu usa pra pedir uma mãozinha quando tá precisando de ajuda?
+- A) Can you give me a head?
+	Guardiao Xarok: Bah, que vacilo! Essa não rola. Tenta de novo? => pergunta2
+- B) Would you give me a foot?
+	Guardiao Xarok: Não, guri, tá errado. Quer tentar outra vez? => pergunta2
+- C) Could you give me a hand?
+	Guardiao Xarok: Tri, tchê! Mandou certinho. Bora pra próxima! => pergunta3
+- D) Should you give me a arm?
+	Guardiao Xarok: Errou feio, vivente! Tenta de novo? => pergunta2
+
+~ pergunta3
+Guardiao Xarok: Pergunta 3: Como tu mostra que tá pilhado e super de acordo com um plano?
+- A) I’m all out!
+	Guardiao Xarok: Não, vivente, essa não cola. Tenta de novo? => pergunta3
+- B) I’m all in!
+	Guardiao Xarok: Show, tchê! Tô gostando do teu jeito. Próxima pergunta! => pergunta4
+- C) I’m all over!
+	Guardiao Xarok: Bah, pisou na jaca! Quer tentar outra vez? => pergunta3
+- D) I’m all down!
+	Guardiao Xarok: Errou, guri! A frase tá errada. Tenta de novo? => pergunta3
+
+~ pergunta4
+Guardiao Xarok: Pergunta 4: Qual frase tu manda pra se desculpar quando mete os pé pela mão?
+- A) My good, I fixed up.
+	Guardiao Xarok: Não, vivente, essa não é a certa. Tenta de novo? => pergunta4
+- B) My fault, I cleaned up.
+	Guardiao Xarok: Bah, tá errado! Quer tentar outra vez? => pergunta4
+- C) My error, I showed up.
+	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta4
+- D) My bad, I messed up.
+	Guardiao Xarok: Baita resposta, tchê! Tô vendo que tu manja. Bora pra próxima! => pergunta5
+
+~ pergunta5
+Guardiao Xarok: Pergunta 5: Como tu pergunta pra entender o que tá rolando, tipo “qual é o esquema”?
+- A) What’s the game?
+	Guardiao Xarok: Não, vivente, essa não é a frase. Tenta de novo? => pergunta5
+- B) What’s the plan?
+	Guardiao Xarok: Tri legal, tchê! Tu tá mandando bem. Próxima! => pergunta6
+- C) What’s the time?
+	Guardiao Xarok: Bah, vacilou! Quer tentar outra vez? => pergunta5
+- D) What’s the name?
+	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta5
+
+~ pergunta6
+Guardiao Xarok: Pergunta 6: Qual frase tu usa pra pedir um caminho, tipo “me aponta o rumo”?
+- A) Can you show me the way?
+	Guardiao Xarok: Baita, tchê! Tô impressionado. Última pergunta! => pergunta7
+- B) Can you tell me the road?
+	Guardiao Xarok: Não, vivente, não é essa. Tenta de novo? => pergunta6
+- C) Can you give me the path?
+	Guardiao Xarok: Bah, tá errado! Quer tentar outra vez? => pergunta6
+- D) Can you find me the street?
+	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta6
+
+~ pergunta7
+Guardiao Xarok: Pergunta 7: Como tu mostra que tá animado, tipo dizendo “que baita coisa!”?
+- A) That’s so fine!
+	Guardiao Xarok: Não, vivente, quase mas não é. Tenta de novo? => pergunta7
+- B) That’s so nice!
+	Guardiao Xarok: Bah, pisou na jaca! Quer tentar outra vez? => pergunta7
+- C) That’s so cool!
+	Guardiao Xarok: Tri, tchê! Tu passou no teste! O Museu de Panambi te espera. Entra com orgulho! [set global.permissao_museu=true] => END 
+- D) That’s so good!
+	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta7

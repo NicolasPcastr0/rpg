@@ -1,0 +1,18 @@
+~ start 
+Thalzorn: [[Oi|Bah, tchê]], baita aventureiro! Eu sou o Thalzorn, um gaúcho que manja das língua antiga. Tô ligado que tu tá querendo entrar no Museu Municipal de Panambi, e lá precisa falar inglês direitinho. Quer umas dica minha pra se dar bem?
+- Sim, quero as dicas! 
+	Thalzorn: Tri legal, guri! Ó aqui cinco frase pra tu mandar bem na prova do museu: 
+	Thalzorn: 1. "Hey, how’s it going?" (E aí, como é que tá?) – Um alô bem na manha. 
+	Thalzorn: 2. "Can you show me the way?" (Me aponta o rumo?) – Pra quando tu tá meio perdido. 
+	Thalzorn: 3. "That’s so cool!" (Que baita coisa!) – Pra mostrar que tu tá curtindo. 
+	Thalzorn: 4. "I didn’t mean to do that." (Não foi de propósito, tchê.) – Pra se desculpar sem drama. 
+	Thalzorn: 5. "Can you explain that again?" (Dá pra repetir o chimarrão?) – Pra entender melhor o que rola. 
+	Thalzorn: Quer treinar uma frase ou já vai meter o pé na missão?
+	- Treinar uma frase 
+		Thalzorn: Bah, que beleza! Tenta um "Can you show me the way?" no próximo que tu encontrar. Volta se precisar de um mate novo! => END
+	- Seguir pra missão 
+		Thalzorn: Valente, tchê! Mete bronca no museu e boa sorte! => END
+- Não, tô de boa. 
+	Thalzorn: Tranquilo, vivente. Mas o museu é brabo, hein, se prepara!
+	Thalzorn: Se mudar o plano, dá um pulo aqui pra prosear!
+ => END

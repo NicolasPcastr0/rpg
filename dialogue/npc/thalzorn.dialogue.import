@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bn1d2qpakr82b"
+path="res://.godot/imported/thalzorn.dialogue-2b97ce0609eaf79e359aa9131b448591.tres"
+
+[deps]
+
+source_file="res://dialogue/npc/thalzorn.dialogue"
+dest_files=["res://.godot/imported/thalzorn.dialogue-2b97ce0609eaf79e359aa9131b448591.tres"]
+
+[params]
+
+defaults=true

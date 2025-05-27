@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://chvs4113aiut1"]
 
-[ext_resource type="Script" uid="uid://cff0k7ny1hy38" path="res://scenes/museu.gd" id="1_mpfmv"]
+[ext_resource type="Script" uid="uid://cff0k7ny1hy38" path="res://scripts/museu.gd" id="1_mpfmv"]
 [ext_resource type="Texture2D" uid="uid://dijycsbhf5sct" path="res://sprites/images/preto.png" id="1_qwvcv"]
 [ext_resource type="Texture2D" uid="uid://c1vb7nppehnxk" path="res://sprites/tilesets/floors/wooden.png" id="2_gohbi"]
 [ext_resource type="Texture2D" uid="uid://dl6418kmxulkt" path="res://sprites/images/representação-em-forma-de-pixel-um-tanque-camuflagem-verde-com-canhão-grande-e-fios-detalhados-sobre-fundo-comum-322311432 (1).png" id="4_xme44"]
@@ -1171,4 +1171,3 @@ position = Vector2(605.75, 603.875)
 shape = SubResource("RectangleShape2D_xme44")
 
 [connection signal="body_entered" from="Area2D" to="." method="aoSairMuseu"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

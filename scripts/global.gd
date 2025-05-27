@@ -11,27 +11,37 @@ var player_exit_museu_posy = 514
 var player_start_posx = 22
 var player_start_posy = 71
 
+var permissao_museu = false
+
 var game_first_loding = true
 
-func finish_changescenes():
-	if transaction_scene == true:
-		if current_scene == "world":
-			current_scene == "museu"
-		elif current_scene == "museu":
-			current_scene == "world"
-		transaction_scene = false
-			
 func _process(delta:float): 
 	change_scene()
 
 func change_scene():
-	if transaction_scene == true:
+	if transaction_scene:
 		if current_scene == "world":
-			get_tree().change_scene_to_file("res://scenes/museu.tscn")
+			mudar_scena("museu")
 			current_scene = "museu"
 		elif current_scene == "museu":
-			get_tree().change_scene_to_file("res://scenes/world.tscn")
+			mudar_scena("world")
 			current_scene = "world"
 			global.game_first_loding = false
 			
 		finish_changescenes()
+
+func finish_changescenes():
+	if transaction_scene == true:
+		transaction_scene = false
+
+func changeSceneMuseu():
+	transaction_scene = true
+	current_scene = "world"
+
+func changeSceneWorld():
+	transaction_scene = true
+	current_scene = "museu"
+
+func mudar_scena(scena:String):
+	get_tree().change_scene_to_file("res://scenes/" + scena + ".tscn")
+	

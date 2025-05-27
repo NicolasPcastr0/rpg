@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dclmsjr4cvxso"
+path="res://.godot/imported/quixmera.dialogue-c17a7020f323b9d888c468868cad0346.tres"
+
+[deps]
+
+source_file="res://dialogue/npc/quixmera.dialogue"
+dest_files=["res://.godot/imported/quixmera.dialogue-c17a7020f323b9d888c468868cad0346.tres"]
+
+[params]
+
+defaults=true

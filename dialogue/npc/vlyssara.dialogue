@@ -1,0 +1,18 @@
+~ start 
+Vlyssara: [[Oi|Bah, tchê]], grande caminheiro! Eu sou a Vlyssara, uma gaúcha que vê longe com as palavra. Tô sabendo que tu tá de olho no Museu Municipal de Panambi, onde precisa falar inglês pra passar. Quer umas dica minha pra ficar tinindo?
+- Sim, quero as dicas! 
+	Vlyssara: Que tri, guri! Toma aqui cinco frase pra tu laçar a prova do museu: 
+	Vlyssara: 1. "Great to meet you!" (Baita prazer te conhecer!) – Pra cumprimentar com estilo. 
+	Vlyssara: 2. "Mind helping me?" (Se importa de dar uma força?) – Suave pra pedir um auxílio. 
+	Vlyssara: 3. "I’m totally up for it!" (Tô mais que pronto, tchê!) – Mostra que tu tá afim. 
+	Vlyssara: 4. "Oops, my fault." (Nossa, vacilei feio.) – Pra quando tu dá uma mancada. 
+	Vlyssara: 5. "What’s up with that?" (Qual é o borogodó disso?) – Pra sacar o que tá rolando. 
+	Vlyssara: Quer ensaiar uma frase ou já vai pro museu de uma vez?
+	- Ensaia uma frase 
+		Vlyssara: Show, tchê! Tenta mandar um "Mind helping me?" pro próximo vivente. Aparece de novo se precisar de um mate! => END
+	- Seguir pra missão 
+		Vlyssara: Baita coragem! Arrebenta lá no museu, guri! => END
+- Não, tô de boa. 
+	Vlyssara: De boa, caminheiro. Mas ó, o museu é coisa séria, hein!
+	Vlyssara: Se mudar de ideia, dá um pulo aqui que a gente troca uma ideia! 
+=> END

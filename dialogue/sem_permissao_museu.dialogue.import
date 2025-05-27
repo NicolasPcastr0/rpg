@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://l1g16qr4xbib"
+path="res://.godot/imported/sem_permissao_museu.dialogue-c3a5fc43b0255353639925346199f36c.tres"
+
+[deps]
+
+source_file="res://dialogue/sem_permissao_museu.dialogue"
+dest_files=["res://.godot/imported/sem_permissao_museu.dialogue-c3a5fc43b0255353639925346199f36c.tres"]
+
+[params]
+
+defaults=true

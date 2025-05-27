@@ -12,32 +12,51 @@ var attack_ip = false                   # Se um ataque do jogador está em progr
 var speed = global.player_speed         # Velocidade do jogador (definida globalmente)
 var curr_dir = "none"                   # Direção atual do jogador
 var input_dir = Vector2.ZERO            # Vetor de entrada do movimento
+var joystick = false
 
-# Função chamada quando o nó é iniciado
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")  # Animação inicial
-
-# Função de processamento físico chamada a cada frame de física
+	
 func _physics_process(delta):
-	player_movement()        # Gerencia movimento do jogador
-	enemy_attack()           # Verifica e aplica ataque inimigo
-	attack()                 # Verifica e aplica ataque do jogador
+	player_movement()
 
-	# Se a vida chegar a zero, mata o jogador
-	if health <= 0:
-		player_alive = false
-		health = 0
-		print("jogador foi morto")
-		self.queue_free()    # Remove o jogador da cena
-
-# Função que controla o movimento do jogador
-func player_movement():
-	if dialogo:
-		# Impede movimento durante diálogo
+func desabilitaMovimentoDuranteDialogo():
 		velocity = Vector2.ZERO
 		play_anim(0)
 		move_and_slide()
+
+func seMoveQuandoPressionaTeclas():
+	var direita = Input.is_action_pressed("ui_right") || Input.is_action_pressed("direita")
+	var esquerda = Input.is_action_pressed("ui_left") || Input.is_action_pressed("esquerda")
+	var baixo = Input.is_action_pressed("ui_down") || Input.is_action_pressed("baixo")
+	var cima = Input.is_action_pressed("ui_up") || Input.is_action_pressed("cima")
+	
+	input_dir = Vector2.ZERO
+	if !(direita || esquerda || baixo || cima):
 		return
+	
+	if direita:
+		input_dir.x += 1
+	if esquerda:
+		input_dir.x -= 1
+	if baixo:
+		input_dir.y += 1
+	if cima:
+		input_dir.y -= 1
+	input_dir = input_dir.normalized()
+	
+	direita = false
+	esquerda = false
+	baixo = false
+	cima = false
+	
+
+func player_movement():
+	if dialogo:
+		desabilitaMovimentoDuranteDialogo()
+		return
+	if !joystick:
+		seMoveQuandoPressionaTeclas()
 	
 	# Se houver entrada de direção, define a direção atual
 	if input_dir.length() > 0:
@@ -152,4 +171,5 @@ func _on_deal_attack_timer_timeout():
 
 # Recebe o movimento do joystick virtual
 func _on_virtual_joystick_analogic_change(move: Vector2) -> void:
+	joystick = move != Vector2.ZERO
 	input_dir = move

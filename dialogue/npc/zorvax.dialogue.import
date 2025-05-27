@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://ug0bkfhj2xw0"
+path="res://.godot/imported/zorvax.dialogue-7d6ab3c77fe662ba2a7450fe5ec95166.tres"
+
+[deps]
+
+source_file="res://dialogue/npc/zorvax.dialogue"
+dest_files=["res://.godot/imported/zorvax.dialogue-7d6ab3c77fe662ba2a7450fe5ec95166.tres"]
+
+[params]
+
+defaults=true

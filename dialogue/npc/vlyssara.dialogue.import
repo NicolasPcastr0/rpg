@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dqnh3yxoe6moe"
+path="res://.godot/imported/vlyssara.dialogue-e83e83e9ef31687ff6f04a3271cc9a9d.tres"
+
+[deps]
+
+source_file="res://dialogue/npc/vlyssara.dialogue"
+dest_files=["res://.godot/imported/vlyssara.dialogue-e83e83e9ef31687ff6f04a3271cc9a9d.tres"]
+
+[params]
+
+defaults=true

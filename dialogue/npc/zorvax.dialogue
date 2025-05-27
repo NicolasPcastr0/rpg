@@ -1,0 +1,18 @@
+~ start
+Zorvax: [[Oi|Bah, tchê]], vivente arretado! Eu sou o Zorvax, um gaúcho daquelas, criado na lida! Tô sabendo que tu tá de olho no Museu Municipal de Panambi, mas os cara lá são brabos, pedem pra tu mandar um inglês tinindo. Quer umas dica minha pra não pisar na jaca com essas frase dos anglo?
+- Sim, quero as dicas!
+	Zorvax: Tri, guri! Toma aqui cinco frase pra tu laçar a prova do museu e deixar os gringo de queixo caído:
+	Zorvax: 1. "Nice to meet you!" (Baita prazer te conhecer, tchê!) – Joga essa pra cumprimentar o povo na moral.
+	Zorvax: 2. "Can you help me?" (Me dá uma mãozinha, compadre?) – Perfeito pra quando tu tá na pindaíba.
+	Zorvax: 3. "That sounds awesome!" (Que coisa dos butiá, tchê!) – Pra mostrar que tu tá pilhado com a ideia.
+	Zorvax: 4. "Sorry, my mistake." (Foi mal, meti os pé pela mão.) – Bom pra quando tu faz um baita vacilo.
+	Zorvax: 5. "What’s going on here?" (Que borogodó é esse que tá rolando?) – Ideal pra sacar o que tá pegando na parada.
+	Zorvax: E aí, tchê, quer ensaiar uma dessas frase ou já vai meter o pé pro museu?
+	- Ensaia uma frase
+		Zorvax: Bah, que beleza, vivente! Tenta mandar um "Can you help me?" pro próximo gaúcho que tu cruzar na coxilha. Volta aqui se precisar de mais mate, tá ligado? => END
+	- Seguir pra missão
+		Zorvax: Coragem de gaúcho, tchê! Mete bronca no museu e não deixa os gringo te passarem a perna! => END
+- Não, tô de boa.
+	Zorvax: De boa, né, vivente? Mas ó, o museu é brabo, não é pra qualquer bagual!
+	Zorvax: Se tu mudar de ideia, dá um pulo aqui que a gente proseia na volta do mate!
+=> END
