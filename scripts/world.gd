@@ -1,11 +1,8 @@
 extends Node2D
 var resourse
-var dialogoGD = load("res://scripts/dialogo.gd")
-var dialogo = dialogoGD.new();
 func _ready(): 
 	addFuncaoQuandoFecharODialogo()
 	definePosicaoJogadorAoSairDoMuseu()
-	$dialogue
 
 func addFuncaoQuandoFecharODialogo():
 	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_finished"))
