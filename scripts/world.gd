@@ -8,12 +8,8 @@ func addFuncaoQuandoFecharODialogo():
 	DialogueManager.connect("dialogue_ended", Callable(self, "_on_dialogue_finished"))
 
 func definePosicaoJogadorAoSairDoMuseu():
-	if global.game_first_loding:
-		$player.position.y = global.player_start_posy
-		$player.position.x = global.player_start_posx
-	else:
-		$player.position.y = global.player_exit_museu_posy
-		$player.position.x = global.player_exit_museu_posx
+	$player.position.y = global.player_position_y
+	$player.position.x = global.player_position_x
 	
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if isPlayer(body):
@@ -57,3 +53,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func isPlayer(body: Node2D):
 	return body.has_method("player")
+
+func entrar_cena_portico(body: Node2D) -> void:
+	if isPlayer(body):
+		global.changeScenePortico()
+	pass

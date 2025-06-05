@@ -1,8 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://cn4hnk31qdsrw"]
+[gd_scene load_steps=16 format=4 uid="uid://7nalvhwiikvw"]
 
+[ext_resource type="Script" uid="uid://bnx6j6rhvt8rd" path="res://scripts/world_2.gd" id="1_3m0gu"]
 [ext_resource type="Texture2D" uid="uid://cex346hcuon7r" path="res://sprites/tilesets/kenney_roguelike-modern-city/Tilemap/tilemap_packed.png" id="1_tjjxi"]
 [ext_resource type="Texture2D" uid="uid://c672s3fsr2rpg" path="res://sprites/images/Skate Park em Estilo Pixelado menor.png" id="2_kiokp"]
 [ext_resource type="Texture2D" uid="uid://c1pllywohxl0h" path="res://sprites/images/Skate Park em Estilo Pixelado menor 2.png" id="3_2diqr"]
+[ext_resource type="PackedScene" uid="uid://3ijcgyws37n3" path="res://scenes/player.tscn" id="4_axyqp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kiokp"]
 texture = ExtResource("1_tjjxi")
@@ -3091,8 +3093,12 @@ texture = ExtResource("1_tjjxi")
 [sub_resource type="TileSet" id="TileSet_rwd0d"]
 sources/0 = SubResource("TileSetAtlasSource_o7h1l")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0gu"]
+size = Vector2(64, 20)
+
 [node name="world2" type="Node2D"]
 position = Vector2(-2, -11)
+script = ExtResource("1_3m0gu")
 
 [node name="ruas" type="TileMapLayer" parent="."]
 position = Vector2(0, 8)
@@ -3110,3 +3116,14 @@ tile_set = SubResource("TileSet_3m0gu")
 [node name="restos" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAgABsAAAARAA8AAAAhABsAAAASAA8AAAAjABsAAAARAA8AAAAkABsAAAASAA8AAAAmABcAAAATAA4AAAAmABgAAAATAA8AAAAmABkAAAATABAAAAAmABAAAAATAA4AAAAmABEAAAATAA8AAAAmABIAAAATABAAAAAeABAAAAAQAA4AAAAeABEAAAAQAA8AAAAeABIAAAAQABAAAAAeABcAAAAQAA4AAAAeABgAAAAQAA8AAAAeABkAAAAQABAAAAAXABkAAAAfAAoAAAAXABoAAAAfAAsAAAApABYAAAAfAAoAAAApABcAAAAfAAsAAAAZABEAAAAhAAoAAAAZABIAAAAhAAsAAAAaABYAAAAgAAoAAAAaABcAAAAgAAsAAAAqABEAAAAgAAoAAAAqABIAAAAgAAsAAAAtABkAAAAkAAoAAAAtABoAAAAkAAsAAAAtABQAAAAfAAoAAAAtABUAAAAfAAsAAAAXABQAAAAfAAoAAAAXABUAAAAfAAsAAAAuAAgAAAAfABAAAAAuAAkAAAAfABEAAAAvAAgAAAAgABAAAAAvAAkAAAAgABEAAAAwAAgAAAAhABAAAAAwAAkAAAAhABEAAAAgAAgAAAAfABAAAAAgAAkAAAAfABEAAAAhAAgAAAAgABAAAAAhAAkAAAAgABEAAAAiAAgAAAAhABAAAAAiAAkAAAAhABEAAAAWAAoAAAAiABQAAAAWAAsAAAAiABUAAAAXAAoAAAAjABQAAAAXAAsAAAAjABUAAAAYAAoAAAAkABQAAAAYAAsAAAAkABUAAAAmAAoAAAAiABQAAAAmAAsAAAAiABUAAAAnAAoAAAAjABQAAAAnAAsAAAAjABUAAAAoAAoAAAAkABQAAAAoAAsAAAAkABUAAAAtAB4AAAAfABQAAAAtAB8AAAAfABUAAAAuAB4AAAAgABQAAAAuAB8AAAAgABUAAAAvAB4AAAAhABQAAAAvAB8AAAAhABUAAAAiAB4AAAAfABQAAAAiAB8AAAAfABUAAAAjAB4AAAAgABQAAAAjAB8AAAAgABUAAAAkAB4AAAAhABQAAAAkAB8AAAAhABUAAAAVAB4AAAAfABQAAAAVAB8AAAAfABUAAAAWAB4AAAAgABQAAAAWAB8AAAAgABUAAAAXAB4AAAAhABQAAAAXAB8AAAAhABUAAAAbABwAAAAiAA4AAAAbAB0AAAAiAA8AAAAXAA4AAAAPAA0AAAA=")
 tile_set = SubResource("TileSet_rwd0d")
+
+[node name="player" parent="." instance=ExtResource("4_axyqp")]
+position = Vector2(560, 1117)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(560, 1197)
+shape = SubResource("RectangleShape2D_3m0gu")
+
+[connection signal="body_entered" from="Area2D" to="." method="sair_da_cidade"]

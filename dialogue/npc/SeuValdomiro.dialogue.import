@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cbqgoca32xgxg"
+path="res://.godot/imported/SeuValdomiro.dialogue-2ffb39e6bcb8fc2cf82f4e2e40bd5b66.tres"
+
+[deps]
+
+source_file="res://dialogue/npc/SeuValdomiro.dialogue"
+dest_files=["res://.godot/imported/SeuValdomiro.dialogue-2ffb39e6bcb8fc2cf82f4e2e40bd5b66.tres"]
+
+[params]
+
+defaults=true

@@ -17,6 +17,9 @@ func initDialogQuixmera():
 func initDialogSemPermissaoAcessoMuseu():
 	startDialog("sem_permissao_museu")
 
+func initDialogSeuValdomiro():
+	startDialogNpc("SeuValdomiro")
+
 func startDialogNpc(dialog:String):
 	startDialog("npc/" + dialog)
 	
