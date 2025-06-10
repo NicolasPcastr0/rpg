@@ -21,7 +21,7 @@ var player_exit_cidade_posy = 229.0
 var player_start_posx = 22
 var player_start_posy = 71
 
-var permissao_museu = true
+var permissao_museu = false
 
 func _process(delta:float): 
 	change_scene()
