@@ -1294,7 +1294,7 @@ shape = SubResource("RectangleShape2D_jhx03")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_o8fc1")
-volume_db = -30.0
+volume_db = -20.0
 autoplay = true
 mix_target = 1
 parameters/looping = true

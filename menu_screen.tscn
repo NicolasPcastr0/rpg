@@ -69,7 +69,7 @@ text = "QUIT GAME"
 
 [node name="music_main" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_0ft63")
-volume_db = -60.0
+volume_db = -20.0
 autoplay = true
 parameters/looping = true
 

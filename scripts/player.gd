@@ -17,6 +17,9 @@ var joystick = false
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")  # Animação inicial
 	
+	
+
+	
 func _physics_process(delta):
 	player_movement()
 
