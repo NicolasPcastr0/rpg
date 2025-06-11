@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://7nalvhwiikvw"]
+[gd_scene load_steps=17 format=4 uid="uid://7nalvhwiikvw"]
 
 [ext_resource type="Script" uid="uid://bnx6j6rhvt8rd" path="res://scripts/world_2.gd" id="1_3m0gu"]
 [ext_resource type="Texture2D" uid="uid://cex346hcuon7r" path="res://sprites/tilesets/kenney_roguelike-modern-city/Tilemap/tilemap_packed.png" id="1_tjjxi"]
@@ -3096,6 +3096,9 @@ sources/0 = SubResource("TileSetAtlasSource_o7h1l")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0gu"]
 size = Vector2(64, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7h1l"]
+size = Vector2(264.776, 17)
+
 [node name="world2" type="Node2D"]
 position = Vector2(-2, -11)
 script = ExtResource("1_3m0gu")
@@ -3118,12 +3121,23 @@ tile_map_data = PackedByteArray("AAAgABsAAAARAA8AAAAhABsAAAASAA8AAAAjABsAAAARAA8
 tile_set = SubResource("TileSet_rwd0d")
 
 [node name="player" parent="." instance=ExtResource("4_axyqp")]
-position = Vector2(560, 1117)
+position = Vector2(561, 591)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(560, 1197)
+position = Vector2(562, 741)
 shape = SubResource("RectangleShape2D_3m0gu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(543, 764)
+scale = Vector2(11.285, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.15197, -1.5)
+shape = SubResource("RectangleShape2D_o7h1l")
+debug_color = Color(0.870258, 0.265323, 0.584469, 0.42)
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Area2D" to="." method="sair_da_cidade"]

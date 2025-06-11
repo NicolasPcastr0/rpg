@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://d042l4svdwyt2"]
+[gd_scene load_steps=7 format=3 uid="uid://d042l4svdwyt2"]
 
 [ext_resource type="Texture2D" uid="uid://cys0cmwpg1k4r" path="res://sprites/cronicas de panambi.png" id="1_iefc8"]
 [ext_resource type="Script" uid="uid://kc2m3j2glv4m" path="res://menu_screen.gd" id="1_ylmtb"]
 [ext_resource type="Theme" uid="uid://dgnay5nj5m1cu" path="res://default_bnt.tres" id="2_iefc8"]
+[ext_resource type="AudioStream" uid="uid://ckblg5uints2o" path="res://sounds/exploration-chiptune-rpg-adventure-theme-336428.mp3" id="4_0ft63"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iefc8"]
 
@@ -65,6 +66,12 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_ylmtb")
 layout_mode = 2
 theme = ExtResource("2_iefc8")
 text = "QUIT GAME"
+
+[node name="music_main" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0ft63")
+volume_db = -60.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/start_bnt" to="." method="_on_start_bnt_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/diff_btn" to="." method="_on_diff_btn_pressed"]

@@ -12,7 +12,9 @@ func _process(delta: float) -> void:
 
 
 func _on_start_bnt_pressed() -> void:
+	$music_main.stop()
 	get_tree().change_scene_to_file("res://scenes/world.tscn")
+	
 
 
 func _on_diff_btn_pressed() -> void:
