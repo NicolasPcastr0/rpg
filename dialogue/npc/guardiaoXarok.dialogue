@@ -1,9 +1,12 @@
 ~ start
-Guardiao Xarok: [[Oi|Bah, tchê]], vivente corajoso! Sou Xarok, guardião do Museu Municipal de Panambi. Pra entrar, tu precisa provar que manja da língua dos anglos. Vou te fazer sete perguntas, cada uma com quatro opções. Manda bem nas frase em inglês que os sábios te ensinaram! Pronto pra começar?
-- Tô pronto, tchê!
-	Guardiao Xarok: Tri, guri! Aqui vai a primeira pergunta. => pergunta1
-- Tô de boa, deixa pra depois.
-	Guardiao Xarok: Aparece quando tiveres coragem, tchê!
+if global.permissao_museu
+	Guardiao Xarok: Bah, tchê! Tu já provou teu valor e respondeu todas as perguntas. Pode entrar no museu quando quiser, vivente! => END
+elif
+	Guardiao Xarok: [[Oi|Bah, tchê]], vivente corajoso! Sou Xarok, guardião do Museu Municipal de Panambi. Pra entrar, tu precisa provar que manja da língua dos anglos. Vou te fazer sete perguntas, cada uma com quatro opções. Manda bem nas frase em inglês que os sábios te ensinaram! Pronto pra começar?
+	- Tô pronto, tchê!
+		Guardiao Xarok: Tri, guri! Aqui vai a primeira pergunta. => pergunta1
+	- Tô de boa, deixa pra depois.
+		Guardiao Xarok: Aparece quando tiveres coragem, tchê!
 => END
 
 ~ pergunta1
@@ -16,6 +19,8 @@ Guardiao Xarok: Pergunta 1: Como tu cumprimenta alguém de forma amigável, tipo
 		Guardiao Xarok: Bah, meteu os pé pela mão! Quer tentar outra vez? => pergunta1
 - D) Good to talk you!
 		Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta1
+- Sair do desafio.
+	Guardiao Xarok: Bueno, volta quando tiveres mais coragem! => END
 
 ~ pergunta2
 Guardiao Xarok: Pergunta 2: Qual frase tu usa pra pedir uma mãozinha quando tá precisando de ajuda?
@@ -27,6 +32,8 @@ Guardiao Xarok: Pergunta 2: Qual frase tu usa pra pedir uma mãozinha quando tá
 	Guardiao Xarok: Tri, tchê! Mandou certinho. Bora pra próxima! => pergunta3
 - D) Should you give me a arm?
 	Guardiao Xarok: Errou feio, vivente! Tenta de novo? => pergunta2
+- Sair do desafio.
+	Guardiao Xarok: Bueno, volta quando quiser continuar! => END
 
 ~ pergunta3
 Guardiao Xarok: Pergunta 3: Como tu mostra que tá pilhado e super de acordo com um plano?
@@ -38,6 +45,8 @@ Guardiao Xarok: Pergunta 3: Como tu mostra que tá pilhado e super de acordo com
 	Guardiao Xarok: Bah, pisou na jaca! Quer tentar outra vez? => pergunta3
 - D) I’m all down!
 	Guardiao Xarok: Errou, guri! A frase tá errada. Tenta de novo? => pergunta3
+- Sair do desafio.
+	Guardiao Xarok: Até mais, vivente! Volta quando quiser terminar! => END
 
 ~ pergunta4
 Guardiao Xarok: Pergunta 4: Qual frase tu manda pra se desculpar quando mete os pé pela mão?
@@ -49,6 +58,8 @@ Guardiao Xarok: Pergunta 4: Qual frase tu manda pra se desculpar quando mete os 
 	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta4
 - D) My bad, I messed up.
 	Guardiao Xarok: Baita resposta, tchê! Tô vendo que tu manja. Bora pra próxima! => pergunta5
+- Sair do desafio.
+	Guardiao Xarok: Valeu, guri! Tamo te esperando de novo! => END
 
 ~ pergunta5
 Guardiao Xarok: Pergunta 5: Como tu pergunta pra entender o que tá rolando, tipo “qual é o esquema”?
@@ -60,6 +71,8 @@ Guardiao Xarok: Pergunta 5: Como tu pergunta pra entender o que tá rolando, tip
 	Guardiao Xarok: Bah, vacilou! Quer tentar outra vez? => pergunta5
 - D) What’s the name?
 	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta5
+- Sair do desafio.
+	Guardiao Xarok: Certo! Quando quiser, é só voltar. => END
 
 ~ pergunta6
 Guardiao Xarok: Pergunta 6: Qual frase tu usa pra pedir um caminho, tipo “me aponta o rumo”?
@@ -71,6 +84,8 @@ Guardiao Xarok: Pergunta 6: Qual frase tu usa pra pedir um caminho, tipo “me a
 	Guardiao Xarok: Bah, tá errado! Quer tentar outra vez? => pergunta6
 - D) Can you find me the street?
 	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta6
+- Sair do desafio.
+	Guardiao Xarok: Hasta luego, guri! A hora que quiser, volta! => END
 
 ~ pergunta7
 Guardiao Xarok: Pergunta 7: Como tu mostra que tá animado, tipo dizendo “que baita coisa!”?
@@ -82,3 +97,5 @@ Guardiao Xarok: Pergunta 7: Como tu mostra que tá animado, tipo dizendo “que 
 	Guardiao Xarok: Tri, tchê! Tu passou no teste! O Museu de Panambi te espera. Entra com orgulho! [set global.permissao_museu=true] => END 
 - D) That’s so good!
 	Guardiao Xarok: Errou, guri! Tenta de novo? => pergunta7
+- Sair do desafio.
+	Guardiao Xarok: Te vejo por aí, vivente! Só voltar se quiser continuar. => END

@@ -14,10 +14,16 @@ var curr_dir = "none"                   # Direção atual do jogador
 var input_dir = Vector2.ZERO            # Vetor de entrada do movimento
 var joystick = false
 
+
+
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")  # Animação inicial
 	
-	
+func setSpeed(velocity : int):
+	speed = velocity;
+
+func setDefaultSpeed():
+	speed = global.player_speed_default;
 
 	
 func _physics_process(delta):

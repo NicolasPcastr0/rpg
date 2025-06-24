@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxboptt5lsgsi"]
+
+[ext_resource type="Texture2D" uid="uid://diooefuuwut5q" path="res://sprites/images/gremio panambi.png" id="1_6xol0"]
+[ext_resource type="Script" uid="uid://btm2yyssyfoxu" path="res://scenes/gremio_pb.gd" id="1_n6qi4"]
+[ext_resource type="PackedScene" uid="uid://3ijcgyws37n3" path="res://scenes/player.tscn" id="3_uwfq6"]
+
+[node name="gremioPB" type="Node2D"]
+script = ExtResource("1_n6qi4")
+
+[node name="GremioPanambi" type="Sprite2D" parent="."]
+position = Vector2(583, 377)
+texture = ExtResource("1_6xol0")
+
+[node name="player" parent="." instance=ExtResource("3_uwfq6")]
+position = Vector2(507, 992)
+scale = Vector2(3, 3)

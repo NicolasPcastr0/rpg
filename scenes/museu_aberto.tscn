@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2qmtxhlyje0x"]
+
+[ext_resource type="Texture2D" uid="uid://db0dnrthfb5dm" path="res://sprites/images/Museu a Céu Aberto 16-bit.png" id="1_3eay4"]
+[ext_resource type="Script" uid="uid://c2fb1wgej6h1q" path="res://scenes/museu_aberto.gd" id="1_31atx"]
+[ext_resource type="PackedScene" uid="uid://3ijcgyws37n3" path="res://scenes/player.tscn" id="2_31atx"]
+
+[node name="museuAberto" type="Node2D"]
+script = ExtResource("1_31atx")
+
+[node name="MuseuACéuAberto16-bit" type="Sprite2D" parent="."]
+position = Vector2(514, -122)
+texture = ExtResource("1_3eay4")
+
+[node name="player" parent="." instance=ExtResource("2_31atx")]
+position = Vector2(558, 376)
+scale = Vector2(1.5, 1.5)
