@@ -35,7 +35,7 @@ func _dialogue_vlyssara(body: Node2D) -> void:
 
 func _dialogue_zorvax(body: Node2D) -> void:
 	if isPlayer(body):
-		$"NPC-1/Area2D2/npc1-dialogo".play()
+		
 		$player.player_stop_dialogue(true)
 		dialogo.initDialogZorvax()
 
