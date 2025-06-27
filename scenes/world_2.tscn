@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://7nalvhwiikvw"]
+[gd_scene load_steps=21 format=4 uid="uid://7nalvhwiikvw"]
 
 [ext_resource type="Script" uid="uid://bnx6j6rhvt8rd" path="res://scripts/world_2.gd" id="1_3m0gu"]
 [ext_resource type="Texture2D" uid="uid://cex346hcuon7r" path="res://sprites/tilesets/kenney_roguelike-modern-city/Tilemap/tilemap_packed.png" id="1_tjjxi"]
@@ -5722,7 +5722,10 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hgrhv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0gu"]
-size = Vector2(60, 19)
+size = Vector2(60, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o7h1l"]
+size = Vector2(113, 76)
 
 [node name="world2" type="Node2D"]
 y_sort_enabled = true
@@ -5761,12 +5764,28 @@ tile_map_data = PackedByteArray("AAA1ABAAAAAEABEAAAAgANr/AAAAAA8AAAAuABkAAAAEABE
 tile_set = SubResource("TileSet_dr8ba")
 
 [node name="player" parent="." instance=ExtResource("4_axyqp")]
-position = Vector2(559, 1082)
+position = Vector2(564, 1134)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="entrada" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(560, 1189)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entrada"]
+position = Vector2(560, 1210)
 shape = SubResource("RectangleShape2D_3m0gu")
 
-[connection signal="body_entered" from="Area2D" to="." method="sair_da_cidade"]
+[node name="gremio" type="Area2D" parent="."]
+position = Vector2(334, 856)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gremio"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_o7h1l")
+
+[node name="museu_aberto" type="Area2D" parent="."]
+position = Vector2(771, 852)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="museu_aberto"]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_o7h1l")
+
+[connection signal="body_entered" from="entrada" to="." method="sair_da_cidade"]
+[connection signal="body_entered" from="gremio" to="." method="entrar_gremio"]
+[connection signal="body_entered" from="museu_aberto" to="." method="entrar_museu_aberto"]

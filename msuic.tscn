@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqfbg1nq3yqi8"]
+
+[ext_resource type="AudioStream" uid="uid://bo6dyycx7df17" path="res://sounds/439_Goodhaven.mp3" id="1_rdhsb"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_rdhsb")
+volume_db = -20.0
+autoplay = true
+mix_target = 1
+parameters/looping = true

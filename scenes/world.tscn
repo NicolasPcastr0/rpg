@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://q0tu4a8mqjqn"]
+[gd_scene load_steps=29 format=4 uid="uid://q0tu4a8mqjqn"]
 
 [ext_resource type="Texture2D" uid="uid://ca6ur2l1b8n6u" path="res://sprites/tilesets/plains.png" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://dg5vl8insmk7e" path="res://scripts/world.gd" id="1_w7kh3"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bn62n5d26qnhk" path="res://sprites/images/museu menor.png" id="10_jhx03"]
 [ext_resource type="Texture2D" uid="uid://clu0nnwy3u80f" path="res://sprites/tilesets/kenney_roguelike-modern-city/Tilemap/tilemap.png" id="10_o8fc1"]
 [ext_resource type="PackedScene" uid="uid://wtfw5yjemje1" path="res://scenes/npc_1.tscn" id="12_q5onr"]
-[ext_resource type="AudioStream" uid="uid://bo6dyycx7df17" path="res://sounds/439_Goodhaven.mp3" id="14_o8fc1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfnet"]
 texture = ExtResource("1_4wyf3")
@@ -1297,13 +1296,6 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(311, 635)
 shape = SubResource("RectangleShape2D_jhx03")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14_o8fc1")
-volume_db = -20.0
-autoplay = true
-mix_target = 1
-parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
